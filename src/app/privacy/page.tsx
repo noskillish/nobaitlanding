@@ -8,16 +8,19 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       {/* Header */}
-      <header className="border-b border-zinc-100">
-        <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
-          <Link href="/" className="text-lg font-semibold text-zinc-900">
+      <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#f5f5f0]/80">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+          <Link
+            href="/"
+            className="text-base font-semibold tracking-tight text-zinc-900"
+          >
             Nobait™
           </Link>
           <Link
             href="/"
-            className="text-sm text-zinc-400 transition-colors hover:text-zinc-900"
+            className="rounded-full px-4 py-1.5 text-sm text-zinc-500 transition-colors hover:bg-black/5 hover:text-zinc-900"
           >
             Tilbage
           </Link>
@@ -25,15 +28,15 @@ export default function PrivacyPage() {
       </header>
 
       {/* Content */}
-      <main className="mx-auto max-w-3xl px-6 py-16">
-        <h1 className="mb-2 text-3xl font-semibold tracking-tight">
-          Privatlivspolitik
+      <main className="mx-auto max-w-3xl px-6 py-20 md:py-28">
+        <h1 className="text-[clamp(2rem,4vw,3rem)] font-light leading-tight tracking-tight text-zinc-900">
+          <span className="font-semibold">Privatlivs</span>politik
         </h1>
-        <p className="mb-12 text-sm text-zinc-400">
+        <p className="mt-4 mb-16 text-sm text-zinc-400">
           Sidst opdateret: 9. februar 2026
         </p>
 
-        <div className="space-y-10 text-base leading-relaxed text-zinc-600">
+        <div className="space-y-12 text-base leading-relaxed text-zinc-500">
           <section>
             <h2 className="mb-3 text-lg font-semibold text-zinc-900">
               Hvad Nobait gør
@@ -50,10 +53,10 @@ export default function PrivacyPage() {
               Data der indsamles
             </h2>
             <p>
-              Nobait læser <strong>artikeltekst</strong> fra understøttede
+              Nobait læser <strong className="text-zinc-700">artikeltekst</strong> fra understøttede
               nyhedssider for at generere præcise overskrifter. Indholdet
               behandles midlertidigt og bliver{" "}
-              <strong>
+              <strong className="text-zinc-700">
                 ikke gemt, logget eller videresendt til tredjeparter
               </strong>
               .
@@ -64,13 +67,28 @@ export default function PrivacyPage() {
             <h2 className="mb-3 text-lg font-semibold text-zinc-900">
               Data der ikke indsamles
             </h2>
-            <p>Nobait indsamler <strong>ikke</strong>:</p>
-            <ul className="mt-3 list-inside list-disc space-y-1.5 text-zinc-500">
-              <li>Personlige oplysninger (navn, e-mail, adresse)</li>
-              <li>Browserhistorik</li>
-              <li>Cookies eller loginoplysninger</li>
-              <li>Placeringsdata</li>
-              <li>Analyse- eller brugsstatistik</li>
+            <p>Nobait indsamler <strong className="text-zinc-700">ikke</strong>:</p>
+            <ul className="mt-4 space-y-2 text-zinc-400">
+              <li className="flex items-start gap-2">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-zinc-300" />
+                Personlige oplysninger (navn, e-mail, adresse)
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-zinc-300" />
+                Browserhistorik
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-zinc-300" />
+                Cookies eller loginoplysninger
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-zinc-300" />
+                Placeringsdata
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-zinc-300" />
+                Analyse- eller brugsstatistik
+              </li>
             </ul>
           </section>
 
@@ -100,20 +118,35 @@ export default function PrivacyPage() {
               Kontakt
             </h2>
             <p>
-              Spørgsmål? Opret en{" "}
-              <a
-                href="https://github.com/noskillish/nobait/issues"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 transition-colors hover:text-zinc-900"
+              Spørgsmål? Besøg vores{" "}
+              <Link
+                href="/support"
+                className="text-zinc-900 underline underline-offset-4 decoration-zinc-300 transition-colors hover:decoration-zinc-900"
               >
-                issue på GitHub
+                support-side
+              </Link>{" "}
+              eller kontakt udvikleren på{" "}
+              <a
+                href="mailto:support@nobait.dk"
+                className="text-zinc-900 underline underline-offset-4 decoration-zinc-300 transition-colors hover:decoration-zinc-900"
+              >
+                support@nobait.dk
               </a>
               .
             </p>
           </section>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-zinc-200/60 px-6 py-10">
+        <div className="mx-auto flex max-w-6xl items-center justify-between text-sm text-zinc-400">
+          <span>&copy; {new Date().getFullYear()} Nobait</span>
+          <Link href="/" className="transition-colors hover:text-zinc-900">
+            nobait.dk
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 }
