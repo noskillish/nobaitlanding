@@ -33,7 +33,7 @@ export function DemoCard() {
           className="flex items-center gap-2.5 rounded-full bg-zinc-900 py-1.5 pl-4 pr-2 text-[13px] font-medium text-white transition-colors hover:bg-zinc-800"
         >
           Nobait™
-          <span className="text-white/50">{enabled ? "on" : "off"}</span>
+          <span className="text-white/70">{enabled ? "on" : "off"}</span>
           <div
             className={`relative h-5 w-9 rounded-full transition-colors ${
               enabled ? "bg-white/20" : "bg-white/10"
@@ -75,7 +75,7 @@ export function DemoCard() {
                 <p
                   className={`text-[15px] font-bold leading-snug transition-colors duration-300 ${
                     enabled
-                      ? "text-zinc-400 line-through decoration-zinc-300 decoration-1"
+                      ? "text-zinc-300 line-through decoration-zinc-200 decoration-1"
                       : "text-zinc-900"
                   }`}
                 >
@@ -95,14 +95,14 @@ export function DemoCard() {
                 </p>
                 <p
                   className={`text-[15px] font-semibold leading-snug transition-colors duration-300 ${
-                    enabled ? "text-zinc-900" : "text-zinc-400"
+                    enabled ? "text-zinc-900" : "text-zinc-300"
                   }`}
                 >
                   {ex.title}
                 </p>
                 <p
                   className={`mt-1 text-[13px] leading-relaxed transition-colors duration-300 ${
-                    enabled ? "text-zinc-500" : "text-zinc-300"
+                    enabled ? "text-zinc-500" : "text-zinc-200"
                   }`}
                 >
                   {ex.lead}

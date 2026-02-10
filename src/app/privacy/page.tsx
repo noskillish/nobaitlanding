@@ -44,7 +44,7 @@ export default function PrivacyPage() {
             <p>
               Nobait er en Chrome-extension der erstatter clickbait-overskrifter
               på danske nyhedssider (Ekstrabladet, Politiken, Børsen) med
-              faktuelle overskrifter genereret af AI.
+              artiklens rigtige overskrift og manchet hentet direkte fra siden.
             </p>
           </section>
 
@@ -53,11 +53,10 @@ export default function PrivacyPage() {
               Data der indsamles
             </h2>
             <p>
-              Nobait læser <strong className="text-zinc-700">artikeltekst</strong> fra understøttede
-              nyhedssider for at generere præcise overskrifter. Indholdet
-              behandles midlertidigt og bliver{" "}
+              Nobait læser <strong className="text-zinc-700">artikeloverskrifter og manchetter</strong> direkte 
+              fra de understøttede nyhedssider. Alt foregår lokalt i din browser —{" "}
               <strong className="text-zinc-700">
-                ikke gemt, logget eller videresendt til tredjeparter
+                ingen data sendes til eksterne servere eller tredjeparter
               </strong>
               .
             </p>
@@ -97,9 +96,9 @@ export default function PrivacyPage() {
               Tredjepartstjenester
             </h2>
             <p>
-              Artikeltekst sendes til en AI-tjeneste udelukkende med det formål
-              at generere overskrifter. Ingen personlige eller identificerbare
-              oplysninger indgår i disse forespørgsler.
+              Nobait bruger <strong className="text-zinc-700">ingen tredjepartstjenester</strong>. 
+              Ingen data sendes til eksterne servere, API&apos;er eller cloud-tjenester. 
+              Extensionen fungerer udelukkende lokalt i din browser.
             </p>
           </section>
 
@@ -124,14 +123,7 @@ export default function PrivacyPage() {
                 className="text-zinc-900 underline underline-offset-4 decoration-zinc-300 transition-colors hover:decoration-zinc-900"
               >
                 support-side
-              </Link>{" "}
-              eller kontakt udvikleren på{" "}
-              <a
-                href="mailto:support@nobait.dk"
-                className="text-zinc-900 underline underline-offset-4 decoration-zinc-300 transition-colors hover:decoration-zinc-900"
-              >
-                support@nobait.dk
-              </a>
+              </Link>
               .
             </p>
           </section>

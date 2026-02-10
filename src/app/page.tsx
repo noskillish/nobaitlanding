@@ -16,10 +16,10 @@ export default function Home() {
             href={CHROME_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-5 py-2 text-[13px] font-medium text-zinc-900 transition-colors hover:bg-zinc-50"
+            className="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-5 py-2 text-[13px] font-medium text-white transition-colors hover:bg-zinc-800"
           >
             Tilføj til Chrome
-            <span className="text-zinc-400">&rarr;</span>
+            <span className="text-white/50">&rarr;</span>
           </a>
         </div>
       </header>
@@ -47,50 +47,39 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 pt-4 pb-4">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="flex flex-col gap-6 rounded-3xl bg-zinc-900 p-10 md:flex-row md:items-center md:justify-between md:p-14">
-            <div>
-              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold text-white">
-                Klar til at prøve?
-              </h2>
-              <p className="mt-2 text-[14px] leading-relaxed text-white/45">
-                Ingen tilmelding. Ingen data. Bare bedre overskrifter.
-              </p>
-            </div>
-            <a
-              href={CHROME_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-[14px] font-medium text-white transition-colors hover:bg-white/10"
-            >
-              Tilføj til Chrome
-              <span className="text-white/50">&rarr;</span>
-            </a>
-          </div>
+      <section className="px-6 py-8">
+        <div className="mx-auto flex max-w-[1200px] flex-col gap-4 rounded-2xl bg-zinc-900 px-6 py-5 md:flex-row md:items-center md:justify-between md:px-8 md:py-4">
+          <p className="text-[14px] text-white/60">
+            Ingen tilmelding. Ingen data. Bare bedre overskrifter.
+          </p>
+          <a
+            href={CHROME_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-2 text-[13px] font-medium text-zinc-900 transition-colors hover:bg-zinc-100 md:w-fit md:justify-start"
+          >
+            Tilføj til Chrome
+            <span className="text-zinc-400">&rarr;</span>
+          </a>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="px-6 py-12">
-        <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-4 text-[13px] md:flex-row">
-          <span className="font-medium text-zinc-900">Nobait™</span>
-          <div className="flex items-center gap-6 text-zinc-400">
-            <Link
-              href="/privacy"
-              className="transition-colors hover:text-zinc-900"
-            >
-              Privatlivspolitik
-            </Link>
-            <Link
-              href="/support"
-              className="transition-colors hover:text-zinc-900"
-            >
-              Support
-            </Link>
-            <span className="text-zinc-300">
-              &copy; {new Date().getFullYear()} — Danske nyheder uden clickbait
-            </span>
+        <div className="mx-auto max-w-[1200px] text-[13px]">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <span className="font-medium text-zinc-900">Nobait™</span>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-zinc-400">
+              <Link href="/privacy" className="transition-colors hover:text-zinc-900">
+                Privatlivspolitik
+              </Link>
+              <Link href="/support" className="transition-colors hover:text-zinc-900">
+                Support
+              </Link>
+              <span className="text-zinc-300">
+                &copy; {new Date().getFullYear()}
+              </span>
+            </div>
           </div>
         </div>
       </footer>
