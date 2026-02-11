@@ -27,11 +27,11 @@ export default function Home() {
       {/* Hero — split */}
       <section className="px-6 pt-16 pb-8 md:pt-24 md:pb-10">
         <div className="mx-auto max-w-[1200px]">
-          <div className="grid gap-6 md:grid-cols-[1.2fr_1fr] md:items-end md:gap-20">
+          <div className="grid gap-6 md:grid-cols-[1.2fr_1fr] md:items-start md:gap-20">
             <h1 className="text-[clamp(2.8rem,5.5vw,4.5rem)] font-normal leading-[1.05] tracking-tight text-zinc-900">
               Nobait
             </h1>
-            <p className="max-w-[400px] text-[15px] leading-relaxed text-zinc-400 md:pb-2">
+            <p className="max-w-[400px] text-[15px] leading-relaxed text-zinc-500 md:pt-1">
               En Chrome-extension der erstatter clickbait-overskrifter på danske
               nyhedssider med artiklens rigtige overskrift og manchet.
             </p>
