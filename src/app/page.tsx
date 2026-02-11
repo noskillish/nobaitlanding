@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { DemoCard } from "@/components/demo-card";
 
-const CHROME_STORE_URL = "#"; // Replace with actual Chrome Web Store link
+const CHROME_STORE_URL = "https://chromewebstore.google.com/detail/nobait/ccdndjignkgojckkdhkngmamajioikbn";
 
 export default function Home() {
   return (
